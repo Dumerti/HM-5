@@ -16,14 +16,14 @@ public class Main {
         System.out.println("Задание №2");
 
         int clientOS = 0;
-        int clientDeviceYear = 2015;
-        String os = clientOS == 0 ? "iOS" : clientOS == 1 ? "Android" : "iOS";
-        String msg = clientDeviceYear <= 2015 ? "Облегченую" : "";
-
-        if (clientOS == 0 || clientOS == 1) {
-            System.out.println("Устоновить " + msg + "версию приложения для " + os + " по ссылке");
-        } else {
-            System.out.println("Ошибка версии");
+        int clientDeviceYear = 2016;
+        String operatingSystem;
+        if (clientOS == 0) {operatingSystem = "IOS";
+        } else  {operatingSystem = "Android";}
+        if (clientDeviceYear > 2015) {
+            System.out.println("Устоновить версию приложения для " + operatingSystem + " по ссылке");
+        } else  {
+            System.out.println("Устоновить облегченую версию приложения для " + operatingSystem + " по ссылке" );
         }
 
         System.out.println(" ");
@@ -31,20 +31,20 @@ public class Main {
 
         int year = 2012;
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " год является високосным");
+            System.out.println(year + " год является высокосным");
         } else {
-            System.out.println(year + " год не является високосным");
+            System.out.println(year + " год не является высокосным");
         }
         System.out.println(" ");
         System.out.println("Задача №4");
 
         int deliveryDistance = 96;
         if (deliveryDistance < 20) {
-            System.out.println("Потребуеться 1 день");
+            System.out.println("Потребуется 1 день");
         } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуеться 2 дня");
+            System.out.println("Потребуется 2 дня");
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Потребуеться 3 дня");
+            System.out.println("Потребуется 3 дня");
         } else {
             System.out.println("доставки нет");
         }
@@ -60,7 +60,7 @@ public class Main {
             case 3:
             case 4:
             case 5:
-                System.out.println("Осень");
+                System.out.println("Весна");
                 break;
             case 6:
             case 7:
